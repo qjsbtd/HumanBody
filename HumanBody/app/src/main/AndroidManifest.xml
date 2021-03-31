@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.shine.humanbody">
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/full_backup_content"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HumanBody"
+        tools:ignore="AllowBackup">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".base.BaseActivity"
+            android:theme="@style/Theme.HumanBody.NoActionBar" />
+        <activity android:name=".HumanActivity" />
+        <activity android:name=".head.HeadActivity" />
+        <activity android:name=".trunk.TrunkActivity" />
+        <activity android:name=".upper.UpperLimbActivity" />
+        <activity android:name=".lower.LowerLimbActivity" />
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/full_backup_content" />
+    </application>
+
+</manifest>
